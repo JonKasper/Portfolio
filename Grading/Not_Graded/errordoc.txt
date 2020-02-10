@@ -1,0 +1,11 @@
+failure.c: In function ‘main’:
+failure.c:4:2: error: ‘cout’ undeclared (first use in this function)
+  cout << "Fail print";
+  ^
+failure.c:4:2: note: each undeclared identifier is reported only once for each function it appears in
+
+
+
+
+
+
