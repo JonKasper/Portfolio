@@ -1,0 +1,84 @@
+# Jon-Paul Kasper
+# CS 2318-254
+# Assignment 2 Program A
+
+# This program prompts the user for an integer, a string no longer than 25 
+# characters, and a single character. The program then reads the input and
+# displays a labeled output abou the user's input
+
+			.data
+intPrompt:		.asciiz "Enter an integer: "
+strPrompt:		.asciiz "Enter a string up to 25 characters: "
+charPrompt:		.asciiz "Enter a single character: "
+intLabel:		.asciiz "Your integer is: "
+strLabel:		.asciiz "Your string is: "
+charLabel:		.asciiz "Your charcter is: "
+sLength:		.space 26 # hold some space for the string
+
+			.text
+			.globl main
+main:
+			# read integer
+			li $v0, 4
+			la $a0, intPrompt
+			syscall
+			li $v0, 5
+			move $t0,$v0
+			syscall
+			
+			# read string
+			li $v0, 4
+			la $a0, strPrompt
+			syscall
+			li $v0, 8
+			la $a0, sLength
+			li $a1, 26
+			move $t1,$a0
+			syscall
+			
+			# read character
+			li $v0, 4
+			la $a0, charPrompt
+			syscall
+			li $v0, 12
+			move $t2,$v0
+			syscall
+			li $v0, 11
+			li $a0, '\n'
+			syscall
+			li $v0, 11
+			li $a0, '\n'
+			syscall
+			
+			# print integer label and integer
+			li $v0, 4
+			la $a0, intLabel
+			syscall
+			li $v0, 1
+			move $a0, $t0
+			syscall
+			li $v0, 11
+			li $a0, '\n'
+			syscall
+			
+			# print string label and string
+			li $v0, 4
+			la $a0, strLabel
+			syscall
+			li $v0, 4
+			move $a0, $t1
+			syscall
+			
+			# print character label and character
+			li $v0, 4
+			la $a0, charLabel
+			syscall
+			li $v0, 11
+			move $a0, $t2
+			syscall
+			li $v0, 11
+			li $a0, '\n'
+			syscall
+			
+			# exit the program
+			li $v0, 10

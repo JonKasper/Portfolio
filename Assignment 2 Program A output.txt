@@ -1,0 +1,10 @@
+Enter an integer: 5
+Enter a string up to 25 characters: exestentialism
+Enter a single character: 4
+
+Your integer is: 5
+Your string is: exestentialism
+Your charcter is: 
+
+-- program is finished running (dropped off bottom) --
+

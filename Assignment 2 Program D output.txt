@@ -1,0 +1,8 @@
+Enter the first test grade: 55
+Enter the second test grade: 44
+Enter the final test grade: 66
+
+Calculating average based on formula... 
+
+Your average is: 57
+-- program is finished running --

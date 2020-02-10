@@ -1,0 +1,17 @@
+The following is the original order of the array: 
+First element: 44
+Second element: 99
+Third element: 33
+Fourth element: 11
+Fifth element: 55
+
+Rearranging the array...
+
+The following is the array in reverse: 
+Fifth element: 99
+Fourth element: 44
+Third element: 33
+Second element: 55
+First element: 11
+
+-- program is finished running --

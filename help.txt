@@ -1,0 +1,24 @@
+#            intArr[valsToDo - i] = GetOneIntByVal(entIntPrompt);
+
+####################(8)####################
+					addi $a0, $sp, 13
+					jal GetOneIntByVal
+					sub $t9, $v0, $t1
+					sll $t9, $t9, 2
+					addi $t9, $t9, 28
+					add $sp, $t9, $sp
+					sw $v0, 0($sp)
+					sub $sp, $sp, $t9
+
+
+#            intArr[valsToDo - i] = GetOneIntByVal(entIntPrompt);
+
+####################(8)####################
+					addi $a0, $sp, 13
+					jal GetOneIntByVal
+					sw $v0, 80($sp)
+					sub $a0, $v0, $t1
+					sll $a0, $a0, 2
+					addi $a0, $a0, 28
+					add $a0, $a0, $sp
+					sw $v0, ($a0)
