@@ -84,7 +84,7 @@ main:
 			sll $a0, $a0, 2		# $a0 = $a0 * 2^2 (via bitwise shift left)
 			syscall			# should print -124 (= -31 * 4)
 			sra $a0, $a0, 2		# $a0 = $a0 / 2^2 (via bitwise shift right)
-			#srl $a0, $a0, 2	# ¿same? aside: 0-extends, changes sign, nah
+			#srl $a0, $a0, 2	# Â¿same? aside: 0-extends, changes sign, nah
 			syscall			# should print -31 (= -124 / 4)
 
 			li $v0, 11
@@ -94,7 +94,7 @@ main:
  			# BEGIN_(swapping intArr[0] & intArr[2] in memory)
 			la $t0, intArr		# $t0 has address of intArr
 			lw $t1, 0($t0)		# $t1 has oneInt[0] (should be 2)
-			#lw $t3, 2($t0)		# caveat aside: ¡load address not aligned!
+			#lw $t3, 2($t0)		# caveat aside: Â¡load address not aligned!
 			lw $t3, 8($t0)		# $t3 has oneInt[2] (should be 1)
 			
 			## BEGIN_(print extra to show intArr[0] & intArr[2] just loaded)
